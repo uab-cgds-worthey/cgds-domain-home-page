@@ -1,4 +1,4 @@
-# CGDS Repository Template [:pencil2: Edit this title]
+# CGDS Landing Page for Public Cluster
 
 <!-- markdown-link-check-disable -->
 [![Perform linting -

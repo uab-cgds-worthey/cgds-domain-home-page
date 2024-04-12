@@ -7,13 +7,11 @@ Markdown](https://github.com/uab-cgds-worthey/cgds_repo_template/actions/workflo
 
 A basic linkout home page for cgds.uab.edu.  Main CGDS website is still https://sites.uab.edu/cgds
 
-## How to install
+## How to build
 
-:pencil2: Add installation instructions here.
-
-## How to run
-
-:pencil2: Add run instructions here. This includes necessary configurations as well as the commands used.
+```bash
+ docker build --no-cache=true --tag=ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest -f Dockerfile .
+```
 
 ## Repo's directory structure
 
@@ -24,10 +22,6 @@ $ tree -a cgds_repo_template/
 cgds_repo_template
 ├── CHANGELOG.md      <- Log of changes made
 │
-├── CONTRIBUTING.md   <- Contribution guidelines
-│
-├── LICENSE.md        <- License for the repo
-│
 ├── README.md
 │
 ├── .gitignore        <- Specifies intentionally untracked files to ignore by git
@@ -37,35 +31,18 @@ cgds_repo_template
 │
 ├── .markdownlint.json  <- Markdown linting config
 │
-├── .pylintrc         <- Python linting config
-│
 ├── configs           <- Dir to store config files. Conda env, requirements.txt, etc.
-│
-├── data              <- Dir structure from http://drivendata.github.io/cookiecutter-data-science. Please give it a read.
-│   ├── external      <- Data from third party sources
-│   ├── interim       <- Intermediate data that has been transformed
-│   ├── processed     <- The final, canonical datasets and results
-│   └── raw           <- The original, immutable data dump
-│
-├── docs              <- Dir to store documentation.
-│
-├── notebooks         <- Dir to store Jupyter, R Markdown notebooks, etc.
 │
 ├── src               <- Dir to store source code for use in this project
 │
 ├── .github
-│   ├── ISSUE_TEMPLATE            <- Github issue templates
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
-│   ├── PULL_REQUEST_TEMPLATE     <- Github PR templates
-│   │   └── pull_request_template.md
-│   └── workflows                 <- Github actions workflows for automated processes (eg. linting, etc)
-│       └── linting.yml
-│
-├── .test             <- Dir to store test datasets
-│   └── README.md
-│
-└── logs              <- Dir to store log files
+    ├── ISSUE_TEMPLATE            <- Github issue templates
+    │   ├── bug_report.md
+    │   └── feature_request.md
+    ├── PULL_REQUEST_TEMPLATE     <- Github PR templates
+    │   └── pull_request_template.md
+    └── workflows                 <- Github actions workflows for automated processes (eg. linting, etc)
+        └── linting.yml
 
 ```
 

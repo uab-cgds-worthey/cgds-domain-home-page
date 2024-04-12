@@ -1,0 +1,29 @@
+name: Compile & Publish
+
+on:
+  push:
+    branches:
+    - main
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Log in to the Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Build Docker Image
+        run: docker build --no-cache=true --tag=ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest -f Dockerfile .
+      
+      - name: Publish to GitHub
+        run: docker push ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest

@@ -5,7 +5,7 @@
 Markdown](https://github.com/uab-cgds-worthey/cgds_repo_template/actions/workflows/linting.yml/badge.svg)](https://github.com/uab-cgds-worthey/cgds_repo_template/actions/workflows/linting.yml)
 <!-- markdown-link-check-enable -->
 
-A basic linkout home page for cgds.uab.edu.  Main CGDS website is still https://sites.uab.edu/cgds
+A basic link out home page for `cgds.uab.edu`.  Main CGDS website is still [https://sites.uab.edu/cgds](https://sites.uab.edu/cgds)
 
 ## How to build
 
@@ -45,7 +45,3 @@ cgds_repo_template
         └── linting.yml
 
 ```
-
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](./CONTRIBUTING.md).

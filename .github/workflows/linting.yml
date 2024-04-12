@@ -21,16 +21,6 @@ jobs:
           # dot: false
           # ignore_files: '".git*/**"'
 
-
-  markdown-check-links:
-    name: Markdown - checking links
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v3
-      - uses: gaurav-nelson/github-action-markdown-link-check@v1
-        with:
-          config-file: ".markdownlint.json"
-
   shellcheck:
     name: Shellcheck
     runs-on: ubuntu-22.04

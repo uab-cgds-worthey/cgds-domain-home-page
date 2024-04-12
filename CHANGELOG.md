@@ -3,10 +3,9 @@
 Here is a changelog format you could use. Feel free to choose a format that works for the repo.
 
 ```txt
-YYYY-MM-DD  John Doe
+2024-04-12  Angelina Uno-Antonison
 
-* Big Change 1
-* Another Change 2
+* Created basic link tree style landing page
 ```
 
 ---

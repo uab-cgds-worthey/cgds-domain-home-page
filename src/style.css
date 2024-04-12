@@ -1,0 +1,55 @@
+/* Style Settings */
+@import url("https://use.typekit.net/rgh1osc.css");
+:root {
+    --bgColor: #144B39 ;
+    --accentColor: #1E6B52;
+    --font: "proxima-nova", sans-serif;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+#teamPhoto{
+    display: block;
+    margin: 35px auto 20px;
+    max-width: 675px;
+    width: 100%;
+}
+
+#userName{
+    color: #88C408;
+    font-size: 1.225rem;
+    font-weight: 900;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 1.75rem auto;
+}
+.link{
+    display: block;
+    background-color: var(--accentColor);
+    color: white;
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding: 1.125rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 0.125rem;
+}
+
+.link:hover{
+    background-color: var(--bgColor);
+    color: #FFD602;
+}

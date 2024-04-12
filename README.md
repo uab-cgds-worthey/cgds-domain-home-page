@@ -5,11 +5,7 @@
 Markdown](https://github.com/uab-cgds-worthey/cgds_repo_template/actions/workflows/linting.yml/badge.svg)](https://github.com/uab-cgds-worthey/cgds_repo_template/actions/workflows/linting.yml)
 <!-- markdown-link-check-enable -->
 
-:pencil2: Add description of the project here.
-
-## Requirements
-
-:pencil2: What are the requirements to install and run the project.
+A basic linkout home page for cgds.uab.edu.  Main CGDS website is still https://sites.uab.edu/cgds
 
 ## How to install
 

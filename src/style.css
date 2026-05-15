@@ -8,7 +8,8 @@
     --uab-green-soft: rgba(26, 86, 50, 0.14);
     --card-bg: #ffffff;
     --card-shadow: 0 1px 2px rgba(3, 51, 25, 0.06), 0 4px 16px rgba(3, 51, 25, 0.08);
-    --card-shadow-hover: 0 4px 20px rgba(3, 51, 25, 0.12);
+    --link-shadow: 0 1px 2px rgba(3, 51, 25, 0.1);
+    --link-shadow-hover: 0 1px 3px rgba(3, 51, 25, 0.12);
     --font: "aktiv-grotesk", Arial, sans-serif;
 }
 
@@ -16,6 +17,10 @@
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+main > h1 {
+    margin: 0;
 }
 
 body {
@@ -66,8 +71,8 @@ body {
 
 .link {
     display: block;
-    background-color: var(--card-bg);
-    color: var(--uab-green);
+    background-color: var(--uab-green);
+    color: #ffffff;
     font-family: var(--font);
     font-weight: 600;
     font-size: 1rem;
@@ -75,8 +80,8 @@ body {
     padding: 1rem 1.25rem;
     text-decoration: none;
     border-radius: 12px;
-    border: 1px solid var(--uab-green-soft);
-    box-shadow: var(--card-shadow);
+    border: 1px solid var(--uab-green);
+    box-shadow: var(--link-shadow);
     transition:
         background-color 0.2s ease,
         color 0.2s ease,
@@ -85,13 +90,17 @@ body {
 }
 
 .link:hover {
-    background-color: var(--uab-green);
-    color: #ffffff;
-    border-color: var(--uab-green);
-    box-shadow: var(--card-shadow-hover);
+    background-color: var(--card-bg);
+    color: var(--uab-green);
+    border-color: var(--uab-green-soft);
+    box-shadow: var(--link-shadow-hover);
 }
 
 .link:focus-visible {
-    outline: 2px solid var(--uab-green);
+    outline: 2px solid #ffffff;
     outline-offset: 3px;
+}
+
+.link:focus-visible:hover {
+    outline-color: var(--uab-green);
 }

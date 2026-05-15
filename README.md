@@ -13,6 +13,15 @@ A basic link out home page for `cgds.uab.edu`.  Main CGDS website is still [http
  docker build --no-cache=true --tag=ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest -f Dockerfile .
 ```
 
+## Run locally (Docker)
+
+```bash
+docker build -t cgds-domain-home-page:local -f Dockerfile .
+docker run --rm -p 8080:80 cgds-domain-home-page:local
+```
+
+Open [http://localhost:8080/](http://localhost:8080/). After editing files under `src/`, rebuild the image, stop the running container (Ctrl+C), then `docker run` again. If updates still look stale, rebuild with `--no-cache`.
+
 ## Repo's directory structure
 
 The directory structure below shows the nature of files/directories used in this repo.

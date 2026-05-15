@@ -1,55 +1,97 @@
-/* Style Settings */
-@import url("https://use.typekit.net/rgh1osc.css");
+/* Style Settings — UAB brand guide Adobe kit (bwu2roe, Jan 2026) */
+@import url("https://use.typekit.net/bwu2roe.css");
+
 :root {
-    --bgColor: #144B39 ;
-    --accentColor: #1E6B52;
-    --font: "proxima-nova", sans-serif;
+    /* Brand-aligned tokens — highlight evergreen tint bg per UAB secondary palette */
+    --page-bg: #e8f7ed;
+    --uab-green: #1a5632;
+    --uab-green-soft: rgba(26, 86, 50, 0.14);
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 2px rgba(3, 51, 25, 0.06), 0 4px 16px rgba(3, 51, 25, 0.08);
+    --card-shadow-hover: 0 4px 20px rgba(3, 51, 25, 0.12);
+    --font: "aktiv-grotesk", Arial, sans-serif;
 }
 
-body{
-    background-color: var(--bgColor);
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-#teamPhoto{
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 1.5rem 1.25rem 2.5rem;
+    background-color: var(--page-bg);
+    color: var(--uab-green);
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+}
+
+#teamPhoto {
     display: block;
-    margin: 35px auto 20px;
+    margin: 1rem auto 1.25rem;
     max-width: 675px;
     width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
 }
 
-#userName{
-    color: #88C408;
+#userName {
+    color: var(--uab-green);
     font-size: 1.225rem;
-    font-weight: 900;
-    line-height: 1.25;
+    font-weight: 700;
+    line-height: 1.35;
     display: block;
     font-family: var(--font);
+    max-width: 36rem;
+    margin-inline: auto;
+    padding: 0 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+#userName:hover {
+    color: #033319;
+}
+
+#links {
+    max-width: 420px;
     width: 100%;
-    text-align: center;
-    text-decoration: none;
+    margin: 1.75rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
 }
 
-#links{
-    max-width: 675px;
-    width: auto;
+.link {
     display: block;
-    margin: 1.75rem auto;
-}
-.link{
-    display: block;
-    background-color: var(--accentColor);
-    color: white;
+    background-color: var(--card-bg);
+    color: var(--uab-green);
     font-family: var(--font);
-    text-align: center;
-    margin-bottom: 1.25rem;
-    padding: 1.125rem;
-    text-decoration: none;
+    font-weight: 600;
     font-size: 1rem;
-    transition: all .25s cubic-bezier(.08,.59,.29,.99);
-    border: solid var(--accentColor) 0.125rem;
+    text-align: center;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 1px solid var(--uab-green-soft);
+    box-shadow: var(--card-shadow);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.link:hover{
-    background-color: var(--bgColor);
-    color: #FFD602;
+.link:hover {
+    background-color: var(--uab-green);
+    color: #ffffff;
+    border-color: var(--uab-green);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.link:focus-visible {
+    outline: 2px solid var(--uab-green);
+    outline-offset: 3px;
 }

@@ -1,27 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <title>UAB Center for Computational Genomics and Data Science Link List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <title>
+      UAB Center for Computational Genomics and Data Science Link List
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <img id="teamPhoto" src="images/team-picture.jpeg" alt="Team photo of members of Center for Computational Genomics and Data Science">
+      <img
+        id="teamPhoto"
+        src="images/team-picture.jpeg"
+        alt="Team photo of members of Center for Computational Genomics and Data Science"
+      />
 
-        <h1>
-            <a href="https://sites.uab.edu/cgds/" id="userName">UAB Center for Computational Genomics and Data Science</a>
-        </h1>
+      <h1>
+        <a href="https://sites.uab.edu/cgds/" id="userName"
+          >UAB Center for Computational Genomics and Data Science</a
+        >
+      </h1>
 
-        <nav id="links" aria-label="CGDS tools and website">
-            <a class="link" href="https://sites.uab.edu/cgds/" target="_blank" rel="noopener noreferrer">Visit CGDS Main Website</a>
-            <a class="link" href="https://cgds.uab.edu/rosalution" target="_blank" rel="noopener noreferrer">Launch C-PAM Rosalution Tool</a>
-            <a class="link" href="https://cgds-ditto.streamlit.app/" target="_blank" rel="noopener noreferrer">Browse DITTO Variant Web App</a>
-        </nav>
+      <nav id="links" aria-label="CGDS website, tools, and software">
+        <a
+          class="link"
+          href="https://sites.uab.edu/cgds/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Visit CGDS Main Website</a
+        >
+        <a
+          class="link"
+          href="https://cgds.uab.edu/rosalution"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Launch C-PAM Rosalution Tool</a
+        >
+        <a
+          class="link"
+          href="https://cgds-ditto.streamlit.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Browse DITTO Variant Web App</a
+        >
+        <a
+          class="link"
+          href="https://github.com/uab-cgds-worthey"
+          target="_blank"
+          rel="noopener noreferrer"
+          >View our software on GitHub</a
+        >
+      </nav>
+
+      <section class="news-panel" aria-labelledby="news-heading">
+        <h2 id="news-heading" class="news-heading">Latest News</h2>
+        <div id="news-root">
+          <noscript>
+            <p class="news-fallback">
+              <a
+                href="https://sites.uab.edu/cgds/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Read the latest news on the CGDS website</a
+              >
+            </p>
+          </noscript>
+        </div>
+      </section>
     </main>
-</body>
+    <script src="news.js" defer></script>
+  </body>
 </html>

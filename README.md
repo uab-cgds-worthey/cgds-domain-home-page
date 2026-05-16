@@ -1,17 +1,15 @@
 # CGDS Landing Page for Public Cluster
 
-A static link-out home page for `cgds.uab.edu`. The main CGDS website is
+A basic link out home page for `cgds.uab.edu`. Main CGDS website is still
 [https://sites.uab.edu/cgds](https://sites.uab.edu/cgds).
 
-## Run Locally
+## How to build
 
 ```bash
-python3 -m http.server 8000 --directory src
+docker build --no-cache=true --tag ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest -f Dockerfile .
 ```
 
-Open [http://localhost:8000/](http://localhost:8000/).
-
-## Run Locally With Docker
+## Run locally (Docker)
 
 ```bash
 docker build --tag cgds-domain-home-page:local -f Dockerfile .
@@ -19,12 +17,7 @@ docker run --rm -p 8080:80 cgds-domain-home-page:local
 ```
 
 Open [http://localhost:8080/](http://localhost:8080/).
-
-## Build Production Image
-
-```bash
-docker build --tag ghcr.io/uab-cgds-worthey/cgds-domain-home-page:latest -f Dockerfile .
-```
+After editing files under `src/`, rebuild the image and run it again. If updates look stale, rebuild with `--no-cache=true`.
 
 ## Repo's directory structure
 
